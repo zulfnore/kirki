@@ -1,14 +1,14 @@
 <?php
 
-class Kirki_Customize_Text_Control extends WP_Customize_Control {
+class Kirki_Customize_Group_Title_Control extends WP_Customize_Control {
 
-	public $type = 'text';
+	public $type = 'group_title';
 	public $description = '';
 	public $subtitle = '';
 
 	public function render_content() { ?>
 
-		<label class="customizer-text">
+		<label class="customizer-separator">
 			<span class="customize-control-title">
 				<?php echo esc_html( $this->label ); ?>
 
@@ -20,10 +20,7 @@ class Kirki_Customize_Text_Control extends WP_Customize_Control {
 			<?php if ( '' != $this->subtitle ) : ?>
 				<div class="customizer-subtitle"><?php echo $this->subtitle; ?></div>
 			<?php endif; ?>
-
-			<input type="text" value="<?php echo esc_attr( $this->value() ); ?>" <?php $this->link(); ?> />
 		</label>
 		<?php
-
 	}
 }
